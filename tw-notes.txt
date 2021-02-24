@@ -1,0 +1,378 @@
+ "OO model for lift system", "OO model for chess" 
+
+ 
+Sales Tax Problem
+
+Mars Rover Problem
+
+IPOD Inventory
+
+
+
+Which language u prefer c or java? Why?
+Questions on project
+Write code for merge sort and simulate on array?
+Questions on collections java and implementation
+Explain Sudoku backtracking algorithm
+Design rat in maze problem in oops
+Design fan in oops
+Questions on hashing
+Osi model and function of each layer with some examples
+Database normalization explain 2nf 3nf bcnf with examples
+Schema design for students course and department and asked to write some queries
+
+
+
+
+
+Features of java and when to use c instead of java
+Write code to reverse doubly linked list and simulate with examples
+Create tree form 2 traversals
+Code to detect loop in linked list and solution to remove it
+What happens when u type google.com
+Design student subjects schema
+Questions on Array and Linked list and their usage
+Questions on implementation of Collections
+Questions on garbage collector in java
+Some questions on project
+Code for finding tree height ,diameter 
+ 
+ 
+  always TDD
+2. nice design
+3. remember refactory
+4. google their logical test paper
+5. be a special person rather than just a coder
+6. Ask what thougthworks can get from you and what you can get from him
+7. Finally, be open and straight-forward
+
+
+To insert at end, Arraylist is O(1), whereas LL is O(N)
+
+if we do not know the index of the element, then searching for an element takes O(N) for both linked list and arraylist, this is why Binary search comes to rescue.
+Trees(Graph theory)
+connected acyclic undirected graph.
+if it forms a cycle, then we should not call it as tree.
+There can be n number of children for a node.
+Leaf nodes will not have children.
+
+Binary search trees:
+Data should be in sorted order.
+Every node in tree can have atmost 2 children.
+left node will be less than root node and right node will be greater than root node.
+It is directed.
+left child is always smaller than parent, right child is always greater than parent.
+
+
+
+The left most children in a tree is the minimum number in the array.
+
+The right most children in a tree is the maximum number in the array.
+
+To search for an element, we start from root node, then if element is lesser than root node, then we take left route, which means now we discarded the right sub child itselff. 
+the search will be faster or will be almost half.
+
+O(logN)
+It will be O(logN) only when the tree is balanced tree, if the tree is imbalanced, then time complexity will be O(N). similar to linked list as how we search one element by other.
+Each layer will have 2 pow 0, then 2 pow 1, 2 pow 2.
+N = 2 pow h -1
+
+
+Removing leaf nodes directly
+Removing nodes with 1 children
+Removing nodes with 2 children
+	Finding predecessor:
+		if the node that we remove has both left and right child, then find the largest element in the left subtree, then swap that element with the node.
+		Then remove that leaf(swapped one)
+	Finding Successor:
+		Finding the very next successor in the right subtree, means the node that is very next to the node that we have to remove.
+
+Binary search Tree Traversal:
+	visting the nodes atleast once, time complexity is O(N) - as we will visit all the nodes once.
+Pre-order: Root node, then left subtree and right subtree.
+In-order: left root right
+Post-order: left right root
+
+Note:
+In-order - gives u the sorted order. Ex: names in alphabetical order.
+
+Practical examples:
+operating sto represent file system - hierarchical 
+game trees - chess, tictac toe
+machine learning - decision tree classifier. 
+boosting algorithm
+
+Interview questions:
+compare 2 binary search tree - as far as topology and matching values are considered.
+
+kth smallest item in binary search tree:
+Ex: to find 2nd smallest item in binary search tree.
+For the root node, find number of nodes in left subtree, 
+n = number of nodes in the left sub tree + 1.
+if n==k  return node.
+if n>k - then recursive call on left subtree.
+if n<k - then alter value of k with like k-n, then recursive call of right subtree,
+this way it eliminates, or discards one set of subtree in the beginning and the search will be faster.
+
+Family age Problem:
+total sum of nodes in the tree - O(N) - as we willbe visting all the nodes in the tree.
+
+AVL trees:
+it checks whether the tree is balanced tree or not, when it constructs the tree. - if it is not balanced, then we have to make rotation.
+As it ensures tree to be balanced tree, even on worst case scenario also, the timecomplexity will be O(logN).
+AVL tree ensures time complexity is same as O(logN) for both average case and worst case scenario.
+
+Height of a node is the longest path from actual node to leaf node.
+height = max(left child's height , right childs's height) + 1
+
+Balance factor:
+	difference in height parameter between the left subtree and right subtree.
+
+Balanced treee:
+if the height parameter of the left subtree and height parameter of right subtree as same or equal then we can call it as balanced tree.
+
+positive balance factor cases:
+when the difference between left subtree and right subtree, is positive, means like 2, left subtree contains more node.
+	we need to do right rotation
+
+Negative balance factor cases:
+when the difference between left subtree and right subtree, is negative, means like -1, right subtree contains more node.
+	we need to do left rotation.	
+
+
+
+Binary search tree Application:
+Gaming engine
+Compiler	
+AVL sort tree - Time complexity is O(NlogN)
+		the same timecomplexity can be achieved in quick sort and merge sort.
+Databases - search operations - AVL tree is best.
+	For insert and delete operation, AVL is not best as we have to keep rotating left and right.
+For Databases - best tree is B tree.	
+Operating system heavily depend on these trees
+
+
+		
+RedBlack trees:
+faster to construct.
+They are not as balanced as AVL,
+Root node is always in black color
+a node will be in red color, when parents are balck color, and then both left and right child are also black colour.
+
+B trees:
+		It can have more than 2 children.
+		it is best for read and write operations of large blocks of data.
+		IT is mainly used in DB and file system.
+2-3-B-Tree:
+		Every node can have 2 data elements at the max.
+		Every node can have 3 children at the max.
+			if node having 1 data element, it can have 2 children.
+		But always the basic rules is holds good like - left subtree is lesser than parent, and right subtree is greater than parent.	
+
+		
+Priority Queue:
+	it is implemented using heap.
+Heap:
+	To retreive max element or min element it will take 0(1) complexity
+	Heaps are basically binary trees
+	we will fill layer by layer, from left to right.
+		while filling we will check whether tha parent node is greater than child node or not, if not we will swap it, once after that we will again check whether it satisfies the rules or not, if not again we will swap till the properties of heap are satisfied.
+	Heap is always complete.
+	Heap will be most of the time balanced binary search tree.
+Two types:
+	Max heap:
+		PArent node is always greater than child node.
+		
+	Min heap:
+		Parent node is always lesser than child node.
+		
+Heap datastructure can be represented with array.
+		
+Heap sort:
+	it uses heap datastructure.
+	it is slower in compared to quick sort.
+	Implementation:
+		Take the root node outside, add to stack.
+		take the last child in the tree, put it in root node, heapify it.
+		Check the whether each and every node satisfied heap data structure condition or not and alter accodingly.
+		Then pull that root node and add it to stack, when we repeat the above process, the stack will contain items, pop out fom stack and print it.
+
+Binomial and Fibonacci heaps:
+			merging of two heaps.
+			it contain many trees.
+Fibonacci heaps:			
+		are faster than classic binary heap.
+		Dkijstras shortest path and prima  spanning tree will be faster if we use fibonacci trees instead of binary trees.
+		it can have several children, but number of children are kept low.
+Priority Queue:
+			when we put custom object, and if we override comparable interface, it identifies the priority based on the value and able to compare the objects and when we
+			dequeue we will be able to fetch them.
+
+Hash Tables:
+	Associative arrays:
+		They are abstract data types
+		composed of collection of key value pairs,  where key appears only once.
+Collision:
+		using the keys, it will frame the index in the hash table and it will store the value.
+		so the keys should be unique. the problem is if two different keys forms a same index, then a collision happens.
+		Linked list is used to store, but in worst case, the time complexity will be 0(N) which is bad ,the following are the remedies
+	Open Addressing:
+		Linear probing, if collision happened at k index, then it will look for k+1, k+2, k+3 etc.
+						This will be a problem if there is cluster.	
+						Advantage - the values might be cached.
+		Quadratic probing : if collision happened at k index, then it will look for 1 square, 2 square 3 square etc.
+		Rehashing : 
+					A new function is used and recalculate the index again.
+
+Load factor:
+			n/m
+			is probability of collision.
+			n is actual data occupied in the array.
+			m is the total size of the array.
+			so when the load factor is > 0.75 it resizes the hashtable. - it resizes one dimensional array.
+			Python does the same when it reaches 0.66
+			
+Dynamic resizing:
+			it has to increase the size of the array, as the index position was calculated using the size of the array as modulus operator. Ex:
+				ADAM
+				Ascii value of A + Ascii value of D + Ascii value of A + Ascii value of M
+				275%8 = 3
+				here 8 is the size of the array.
+				275 is the total sum.
+			so when it increase the size it has to recalculate the hashing and store all the old values again based on newly created hash function. so again here it might take 0(N) time complexity.
+so always Binary search tree is best as it guarantees 0(logN) time complexity.
+
+Hashing Real world application:
+	cryptography block chain, use hashing on every blocks.
+	password encryption using sha-256 encryption.
+
+LRU:
+		we will use doubly linked list to store.
+		it contains 2 pointer prev and next.
+		always we will insert new items at the head, means always recently used items willbe close to the head.
+		once the linked list is full, we can delete the least recently used, probably the tail element and adjust other nodes accordingly.
+		we use hashtable bcos - when u search for an node , you can search it in 0(1) time complexity.
+		so the ids or the value of the node or the keys ,hashed and stored in hashtable for faster retreival.
+		
+			
+		
+		
+		
+PArt 2:
+Bubble sort:
+compare adjacent element, and swap. - after this right most element will be bigger.
+In the next iteration, do the same compare and swap till the element before right most element.
+keep doing this for all.
+This is like largest element bubbles to the end of the array
+
+Selection sort:
+Do linear search, find the smallest element in the array and swap it with left most item in the array.
+			now left most item, the smallest got his position.
+Next from the second element -do the same.			
+		
+
+		
+		
+		
+Insertion sort:
+			large data set - in efficient.
+			good for smaller data set < 10.
+			
+			
+
+Modulus operator:
+	To get the last digit of a number.
+	
+Division operator:
+	To remove the last digit of a number.
+
+
+	
+Advanced:	
+setof vertex and edges.
+Undirected Graph:
+The edge (u,v) is identical to edge (v,u) 
+Directed Graph:	
+The edge (u,v) is identical to edge (v,u) 
+
+Trees:
+undirected graph, every pair connected by 1 path.
+Forest:
+	many such graph together called as 
+
+Directed Acyclic graph:
+	there are no cycles.
+
+Complete graph:
+		it is called as complete when all of them are connected.
+
+			
+1.) SEARCH ALGORITHMS
+
+We'll cover the theory as well as the implementation of the most relevant search algorithms!
+
+• linear search
+
+• binary search
+
+Search algorithms are used on a daily basis in applications and softwares. This is why it is crucial to know how they work exactly!
+
+2.) SORTING ALGORITHMS
+
+Sorting is another fundamental topic in computer science and software engineering. Let's consider what approaches you can learn:
+
+• bogo sort
+
+• bubble sort
+
+• cocktail sort
+
+• selection sort
+
+• insertion sort
+
+• shell sort
+
+• merge sort
+
+• quicksort
+
+These are the fundamental sorting algorithms! You can check the algorithms on few items as well as on a huge datasets!
+
+3.) DATA STRUCTURES
+
+"Bad programmers worry about the code. Good programmers worry about data structures and their relationships". This is why it is crucial to learn about data structures: how to store data efficiently and how to access it as fast as possible.
+
+• binary search trees
+
+• tree rotations in AVL trees
+
+• AVL tree animations
+
+• red-black tree animation
+
+4.) GRAPH ALGORITHMS
+
+The final topic is graph algorithms - the most common and most important approaches when dealing with graphs!
+
+• breadth-first search (BFS)
+
+• depth-first search (DFS)
+
+• Dijkstra's shortest path algorithm
+
+• spanning tree algorithm (Kruskal's method)		
+
+
+-----------------------------------------------------
+
+Another way to model this system is to separate, or group related models into separate microservices. In DDD, these models — Price, Priced Items, and Discounts — are called Aggregates. An aggregate is a self-contained model that composes related models. You could change the state of an aggregate only through a published interface, and the aggregate ensures consistency and that the invariants hold good.
+ Context maps help us do just that. They are used to identify and define relationships between various bounded contexts and aggregates. While bounded contexts define the boundary of a model — Price, Discounts, etc. in the example above, Context maps define the relationships between these models and between different contexts. After identifying these dependencies, we can determine the right collaboration model between the teams that will implement these services.
+ 
+The cart context takes care of online authorizations of an order; 
+Order context processes post fulfillment payment processes like Settlements; 
+Contact center handles any exceptions like retrying payments and changing the payment method used for the order
+For the sake of simplicity, let’s assume that all these contexts are implemented as separate services
+All these contexts encapsulate the same model.
+Note that these models are logically the same. That is, they all follow the same Ubiquitous domain language — payment methods, authorizations, and settlements. Just that they are a part of different contexts.
+Another sign that the same model is spread around different contexts is that all of these integrate directly with a single payment gateway and do the same operations as one another 
